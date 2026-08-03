@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/blocks/Header";
+import Footer from "@/components/blocks/Footer";
 
 const geistHeading = Geist({subsets:['latin'],variable:'--font-heading'});
 
@@ -33,14 +35,18 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", roboto.variable, geistHeading.variable)}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full">
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <Header />
+            <main>
+              {children}
+            </main>
+            <Footer />
           </ThemeProvider>
       </body>
     </html>
