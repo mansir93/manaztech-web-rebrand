@@ -51,8 +51,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl"
           >
-            Innovate. Transform.{" "}
-            <span className="text-primary">Deliver.</span>
+            Custom software that grows with your{" "}
+            <span className="text-primary">business.</span>
           </motion.h1>
 
           <motion.p
