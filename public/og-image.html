@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>ManazTech OG Image</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  :root {
+    --primary: oklch(0.432 0.095 166.913);
+    --secondary: oklch(0.274 0.006 286.033);
+    --secondary-dark: oklch(0.16 0.006 286.033);
+    --blue: oklch(0.55 0.15 250);
+  }
+
+  #og-canvas {
+    width: 1200px;
+    height: 630px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f1 100%);
+  }
+
+  .grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .glow-primary {
+    position: absolute;
+    left: -80px;
+    top: -96px;
+    width: 420px;
+    height: 420px;
+    border-radius: 9999px;
+    filter: blur(70px);
+    background: radial-gradient(circle, oklch(0.432 0.095 166.913 / 0.22) 0%, transparent 70%);
+  }
+
+  .glow-blue {
+    position: absolute;
+    right: -40px;
+    bottom: -128px;
+    width: 460px;
+    height: 460px;
+    border-radius: 9999px;
+    filter: blur(70px);
+    background: radial-gradient(circle, oklch(0.55 0.15 250 / 0.14) 0%, transparent 70%);
+  }
+
+  .content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 64px 80px;
+    color: var(--secondary-dark);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand-name {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: oklch(0.2 0.006 286.033);
+  }
+
+  .brand-name span {
+    color: var(--primary);
+  }
+
+  .middle {
+    max-width: 820px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: rgba(0,0,0,0.03);
+    padding: 7px 16px;
+    border-radius: 9999px;
+    font-size: 15px;
+    font-weight: 500;
+    color: oklch(0.35 0.01 286.033);
+    margin-bottom: 24px;
+  }
+
+  .eyebrow .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: var(--primary);
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: oklch(0.18 0.006 286.033);
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, var(--primary), var(--blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .subcopy {
+    margin-top: 24px;
+    max-width: 620px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: oklch(0.4 0.008 286.033);
+  }
+
+  .stats-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 32px;
+  }
+
+  .stat-value {
+    font-size: 30px;
+    font-weight: 600;
+    color: oklch(0.2 0.006 286.033);
+    margin: 0;
+  }
+
+  .stat-label {
+    font-size: 14px;
+    color: oklch(0.45 0.008 286.033);
+    margin: 4px 0 0;
+  }
+
+  .divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(0,0,0,0.1);
+  }
+
+  .domain {
+    margin-left: auto;
+    font-size: 14px;
+    color: oklch(0.5 0.008 286.033);
+  }
+</style>
+</head>
+<body>
+
+  <div id="og-canvas">
+    <div class="grid-bg"></div>
+    <div class="glow-primary"></div>
+    <div class="glow-blue"></div>
+
+    <div class="content">
+      <div class="brand">
+        <img src="./logo.png" alt="logo" width="50" height="50" class="w-auto h-auto">
+        <span class="brand-name">Manaz<span>Tech</span></span>
+      </div>
+
+      <div class="middle">
+        <div class="eyebrow">
+          <span class="dot"></span>
+          Technology Solutions & Digital Transformation
+        </div>
+
+        <h1>
+          Innovate. Transform.<br />
+          <span class="gradient-text">Deliver.</span>
+        </h1>
+
+        <p class="subcopy">
+          Custom software, mobile apps, and cloud solutions that drive real business results for startups and enterprises.
+        </p>
+      </div>
+
+      <div class="stats-row">
+        <div>
+          <p class="stat-value">50+</p>
+          <p class="stat-label">Projects Delivered</p>
+        </div>
+        <div class="divider"></div>
+        <div>
+          <p class="stat-value">98%</p>
+          <p class="stat-label">Client Satisfaction</p>
+        </div>
+        <div class="divider"></div>
+        <div>
+          <p class="stat-value">24/7</p>
+          <p class="stat-label">Support Available</p>
+        </div>
+        <div class="divider"></div>
+        <div>
+          <p class="stat-value">5+</p>
+          <p class="stat-label">Years Experience</p>
+        </div>
+        <div class="domain">manaztech.com</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
