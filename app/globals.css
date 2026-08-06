@@ -139,3 +139,23 @@ section[id] {
     @apply font-sans;
   }
 }
+
+.blog-content h2 {
+  @apply text-3xl font-bold mt-10 mb-4;
+}
+
+.blog-content p {
+  @apply text-muted-foreground leading-8 mb-6;
+}
+
+.blog-content ul {
+  @apply list-disc pl-6 my-6;
+}
+
+.blog-content li {
+  @apply mb-2;
+}
+
+.blog-content section {
+  @apply mb-10;
+}
