@@ -38,14 +38,14 @@ export const services: Service[] = [
     tagline:
       "Custom software built with modern technologies and best practices.",
     summary:
-      "From MVPs to enterprise applications, we design and ship scalable, maintainable software tailored to how your business actually works — not a generic template stretched to fit.",
+      "From MVPs to enterprise applications, we design and ship scalable, maintainable software tailored to how your business actually works not a generic template stretched to fit.",
     icon: Code2,
     tags: ["React", "Node.js", "Python"],
     image: "/services/software-development.jpg",
     imageAlt: "Developers reviewing custom software architecture on screen",
     overview: [
       "Every product we build starts with your workflow, not a boilerplate. We map the real business problem, define a lean scope, and architect a system that can grow without a rewrite.",
-      "We favor proven, well-supported technology over novelty for its own sake — which means faster onboarding for your future team and fewer surprises in production.",
+      "We favor proven, well-supported technology over novelty for its own sake which means faster onboarding for your future team and fewer surprises in production.",
     ],
     features: [
       {
@@ -75,13 +75,13 @@ export const services: Service[] = [
     tagline:
       "Responsive web and native mobile apps with exceptional user experience.",
     summary:
-      "Cross-platform products that feel native wherever they run — one codebase, consistent behavior, and interfaces designed for how people actually hold and tap their devices.",
+      "Cross-platform products that feel native wherever they run one codebase, consistent behavior, and interfaces designed for how people actually hold and tap their devices.",
     icon: Smartphone,
     tags: ["React Native", "Flutter", "PWA"],
     image: "/services/mobile-web-apps.png",
     imageAlt: "Mobile app interface displayed across phone and tablet screens",
     overview: [
-      "We build for the device your customers actually use — which today means a mobile-first web app or a native app, often both, sharing as much logic as sensibly possible.",
+      "We build for the device your customers actually use which today means a mobile-first web app or a native app, often both, sharing as much logic as sensibly possible.",
       "Every screen is designed against real usage patterns: thumb reach, load time on patchy connections, and offline states that don't just show a spinner.",
     ],
     features: [
@@ -91,7 +91,7 @@ export const services: Service[] = [
       },
       {
         title: "Offline-first where it matters",
-        body: "Apps that stay useful on a bad connection, syncing gracefully once one is available.",
+        body: "Apps that stay useful on a bad connection,syncing gracefully once one is available.",
       },
       {
         title: "Performance budgets",
@@ -117,7 +117,7 @@ export const services: Service[] = [
     image: "/services/it-consulting.png",
     imageAlt: "Consultant presenting a technology roadmap on a whiteboard",
     overview: [
-      "We act as the technical co-founder in the room when you don't have one on staff — reviewing existing systems, sizing new ones, and giving a direct opinion, not a vendor pitch.",
+      "We act as the technical co-founder in the room when you don't have one on staff reviewing existing systems, sizing new ones, and giving a direct opinion, not a vendor pitch.",
       "Engagements are scoped tightly: a stack selection, an architecture review, or a full technology roadmap, delivered as a document your team can act on immediately.",
     ],
     features: [
@@ -147,7 +147,7 @@ export const services: Service[] = [
     title: "Cloud Solutions",
     tagline: "Scalable infrastructure and migration services.",
     summary:
-      "We design and migrate cloud infrastructure that scales with real traffic patterns, secured and monitored from day one — on AWS, Azure, or GCP.",
+      "We design and migrate cloud infrastructure that scales with real traffic patterns, secured and monitored from day one on AWS, Azure, or GCP.",
     icon: Cloud,
     tags: ["AWS", "Azure", "GCP"],
     image: "/services/cloud-solutions.png",
@@ -189,8 +189,8 @@ export const services: Service[] = [
     image: "/services/automation.png",
     imageAlt: "Workflow automation diagram with connected process nodes",
     overview: [
-      "Automation only pays off if it's trustworthy. We build workflows with logging, alerting, and clear failure states, so when something does go wrong, someone finds out immediately — not a customer.",
-      "Where AI genuinely helps — document processing, classification, summarization — we use it. Where a plain rule-based workflow is more reliable, we use that instead.",
+      "Automation only pays off if it's trustworthy. We build workflows with logging, alerting, and clear failure states, so when something does go wrong, someone finds out immediately not a customer.",
+      "Where AI genuinely helps document processing, classification, summarization we use it. Where a plain rule-based workflow is more reliable, we use that instead.",
     ],
     features: [
       {
@@ -219,14 +219,14 @@ export const services: Service[] = [
     title: "Digital Transformation",
     tagline: "End-to-end modernization for legacy systems.",
     summary:
-      "We help teams move off legacy systems in stages — modernizing what's business-critical first, integrating along the way, rather than a risky big-bang rewrite.",
+      "We help teams move off legacy systems in stages modernizing what's business-critical first, integrating along the way, rather than a risky big-bang rewrite.",
     icon: RefreshCw,
     tags: ["Migration", "Modernization", "Integration"],
     image: "/services/digital-transformation.png",
     imageAlt: "Team reviewing a system modernization roadmap on a screen",
     overview: [
       "Legacy systems rarely need to be thrown out entirely. We identify what's genuinely holding your business back, and modernize in a sequence that keeps operations running throughout.",
-      "Integration is treated as a first-class concern from the start — new systems need to talk to what you're keeping, not replace everything at once.",
+      "Integration is treated as a first-class concern from the start new systems need to talk to what you're keeping, not replace everything at once.",
     ],
     features: [
       {
