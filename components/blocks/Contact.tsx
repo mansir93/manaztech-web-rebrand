@@ -113,7 +113,7 @@ export default function Contact() {
                 {/* FormSubmit configuration — no account/API key needed */}
                 <input type="hidden" name="_subject" value="New project inquiry — ManazTech website" />
                 <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_captcha" value="true" />
                 {/* Honeypot field: bots fill this in, real users never see it */}
                 <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 

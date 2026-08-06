@@ -4,4 +4,5 @@ export const nav = [
   { label: "Portfolio", url: "#portfolio" },
   { label: "Process", url: "#process" },
   { label: "Contact", url: "#contact" },
+  { label: "Blog", url: "/blog" },
 ]
