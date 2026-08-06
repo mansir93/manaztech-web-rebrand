@@ -18,7 +18,7 @@ const items = [
   {
     icon: Layers,
     title: "Scalable Architecture",
-    body: "Future-proof solutions designed to grow with you — from startup MVP to enterprise scale.",
+    body: "Future-proof solutions designed to grow with you from startup MVP to enterprise scale.",
   },
 ]
 
