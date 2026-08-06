@@ -14,7 +14,7 @@ import OrganizationSchema from "@/lib/OrganizationSchema";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <OrganizationSchema />
       <Hero />
       <ClientStrip />
