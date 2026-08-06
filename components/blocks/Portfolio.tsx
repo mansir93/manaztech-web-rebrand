@@ -43,7 +43,7 @@ const caseStudies: CaseStudy[] = [
     category: "Learning management system",
     summary:
       "An interactive learning platform with course management, progress tracking, and collaborative tools built for modern, remote-first education.",
-    image: "/portfolio/Learnthru_ Manage your online courses _ e-Learning Dashboard.png",
+    image: "/portfolio/educational-platform.png",
     imageAlt: "Educational platform interface showing course modules and student progress",
     tags: ["Next.js", "Express", "MySQL"],
   },
