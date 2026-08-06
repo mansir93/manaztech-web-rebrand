@@ -64,7 +64,7 @@ export default function CTA() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mx-auto mt-4 max-w-xl text-white/60 text-pretty"
           >
-            Tell us what you&apos;re building — we&apos;ll get back to you within 24
+            Tell us what you&apos;re building we&apos;ll get back to you within 24
             hours with a clear, honest read on scope and timeline.
           </motion.p>
 

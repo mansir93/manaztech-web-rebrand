@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "Do you work with early-stage startups or only enterprises?",
     answer:
-      "Both. We scope engagements to match where you are — a lean MVP for a pre-seed startup looks very different from a phased modernization for an enterprise, and we price and staff accordingly.",
+      "Both. We scope engagements to match where you are lean MVP for a pre-seed startup looks very different from a phased modernization for an enterprise, and we price and staff accordingly.",
   },
   {
     question: "Who owns the code and IP after the project ships?",
@@ -28,14 +28,14 @@ const faqs = [
       "You do. Every contract assigns full IP ownership of custom code to you on final payment. We're also happy to sign an NDA before any detailed discussion of your project.",
   },
   {
-    question: "What happens after launch — do you offer support?",
+    question: "What happens after launch do you offer support?",
     answer:
       "Yes. Every project includes a post-launch support window, and most clients move to an ongoing maintenance retainer afterward for monitoring, updates, and small feature work.",
   },
   {
     question: "Can you work with our existing codebase or team?",
     answer:
-      "Regularly. We can slot in alongside an existing engineering team, take over a legacy codebase, or integrate with systems you're already running — a technical audit is usually the first step.",
+      "Regularly. We can slot in alongside an existing engineering team, take over a legacy codebase, or integrate with systems you're already running a technical audit is usually the first step.",
   },
 ]
 
@@ -75,7 +75,7 @@ export default function FAQ() {
           </h2>
           <p className="mt-4 text-muted-foreground text-pretty">
             Answers to what most clients ask before starting a project.
-            Don&apos;t see yours — just ask us directly.
+            Don&apos;t see yours just ask us directly.
           </p>
         </div>
 

@@ -62,7 +62,7 @@ export default function Hero() {
             className="mt-5 max-w-lg text-lg text-muted-foreground text-pretty"
           >
             We build cutting-edge software solutions that drive real business
-            results — combining startup agility with enterprise-grade
+            results combining startup agility with enterprise-grade
             engineering.
           </motion.p>
 
