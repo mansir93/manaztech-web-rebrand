@@ -16,11 +16,13 @@ import {
 } from "@/components/ui/sheet"
 import Mark from "../Mark";
 import { nav } from "@/lib/nav";
+import { usePathname } from "next/navigation";
 
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const { scrollY } = useScroll()
+  const pathname = usePathname()
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 8)
@@ -29,11 +31,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed w-full top-0 z-50 transition-colors duration-300 ${
-          scrolled
-            && "bg-background/85 backdrop-blur-md shadow-sm border-b"
-            
-        }`}
+        className={`fixed w-full top-0 z-50 transition-colors duration-300 ${ scrolled && "bg-background/85 backdrop-blur-md shadow-sm border-b"} ${pathname == "/get-started" && "bg-background/90 backdrop-blur-md sticky top-0"}`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           {/* Logo */}
@@ -69,7 +67,7 @@ export default function Header() {
             <div className="hidden sm:flex">
               <ModeToggle />
             </div>
-              <Link href="#contact">
+              <Link href="/get-started">
                 <Button className="hidden sm:inline-flex group">
                     Get Started
                     <ArrowUpRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -118,7 +116,7 @@ function MobileNav() {
               <span className="text-sm text-muted-foreground">Theme</span>
               <ModeToggle />
             </div>
-              <Link href="#contact">
+              <Link href="/get-started">
                 <Button className="w-full">
                     Get Started
                 </Button>

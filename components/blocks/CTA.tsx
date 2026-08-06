@@ -75,7 +75,7 @@ export default function CTA() {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="mt-9 flex flex-wrap items-center justify-center gap-3"
           >
-              <Link href="#contact">
+              <Link href="/get-started">
                     <Button size="lg" className="group">
                         Start Your Project
                         <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />
