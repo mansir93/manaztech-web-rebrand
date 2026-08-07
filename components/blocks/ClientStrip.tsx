@@ -1,4 +1,5 @@
 "use client"
+// Path: components/blocks/ClientStrip.tsx
 
 import React from "react"
 import { motion } from "motion/react"
@@ -18,7 +19,7 @@ export default function ClientStrip() {
   return (
     <section
       aria-labelledby="clients-heading"
-      className="border-y bg-muted/20 py-14 sm:py-16"
+      className=" bg-muted/20 py-14 sm:py-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p
