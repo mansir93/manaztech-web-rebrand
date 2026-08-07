@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link"
 import { motion } from "motion/react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { services } from "@/lib/services-data"
+import { Button } from "../ui/button";
 
 export default function Services() {
   return (
@@ -31,6 +32,12 @@ export default function Services() {
             <ServiceCard key={service.slug} service={service} index={i} />
           ))}
         </div>
+
+        <div className="flex items-center justify-center mt-5">
+          <Link href={'/services'}>
+            <Button variant={'link'}>Learn more <ArrowRight /></Button>
+          </Link>
+        </div>
       </div>
     </section>
   )
@@ -55,6 +62,7 @@ function ServiceCard({
       transition={{ duration: 0.45, delay: (index % 3) * 0.08 }}
       className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
     >
+
       <Link
         href={`/services/${service.slug}`}
         className="absolute inset-0 z-10"

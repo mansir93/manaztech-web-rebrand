@@ -110,43 +110,6 @@ export const services: Service[] = [
     technologies: ["React Native", "Next.js PWA", "Firebase", "MongoDB", "PostgreSQL"],
   },
   {
-    slug: "it-consulting",
-    isFeatured: false,
-    title: "IT Consulting",
-    tagline: "Strategic technology guidance for informed decisions.",
-    summary:
-      "Before you commit budget to a stack or a rebuild, get an outside technical read: what will actually hold up, what's overkill, and what's quietly a liability.",
-    icon: Compass,
-    tags: ["Strategy", "Architecture", "Planning"],
-    image: "/services/it-consulting.png",
-    imageAlt: "Consultant presenting a technology roadmap on a whiteboard",
-    overview: [
-      "We act as the technical co-founder in the room when you don't have one on staff reviewing existing systems, sizing new ones, and giving a direct opinion, not a vendor pitch.",
-      "Engagements are scoped tightly: a stack selection, an architecture review, or a full technology roadmap, delivered as a document your team can act on immediately.",
-    ],
-    features: [
-      {
-        title: "Vendor-neutral advice",
-        body: "We recommend what fits your constraints, not what we happen to sell.",
-      },
-      {
-        title: "Architecture review",
-        body: "A clear-eyed audit of what's working, what's fragile, and what to fix first.",
-      },
-      {
-        title: "Technology roadmapping",
-        body: "A prioritized plan tied to business goals, not just a wishlist of upgrades.",
-      },
-    ],
-    process: [
-      "Discovery interviews & systems audit",
-      "Findings & risk assessment",
-      "Roadmap with prioritized recommendations",
-      "Optional hands-on implementation support",
-    ],
-    technologies: ["AWS", "Azure", "GCP", "Architecture Diagramming"],
-  },
-  {
     slug: "cloud-solutions",
     isFeatured: true,
     title: "Cloud Solutions",
@@ -182,6 +145,43 @@ export const services: Service[] = [
       "Post-migration optimization",
     ],
     technologies: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD"],
+  },
+  {
+    slug: "it-consulting",
+    isFeatured: false,
+    title: "IT Consulting",
+    tagline: "Strategic technology guidance for informed decisions.",
+    summary:
+      "Before you commit budget to a stack or a rebuild, get an outside technical read: what will actually hold up, what's overkill, and what's quietly a liability.",
+    icon: Compass,
+    tags: ["Strategy", "Architecture", "Planning"],
+    image: "/services/it-consulting.png",
+    imageAlt: "Consultant presenting a technology roadmap on a whiteboard",
+    overview: [
+      "We act as the technical co-founder in the room when you don't have one on staff reviewing existing systems, sizing new ones, and giving a direct opinion, not a vendor pitch.",
+      "Engagements are scoped tightly: a stack selection, an architecture review, or a full technology roadmap, delivered as a document your team can act on immediately.",
+    ],
+    features: [
+      {
+        title: "Vendor-neutral advice",
+        body: "We recommend what fits your constraints, not what we happen to sell.",
+      },
+      {
+        title: "Architecture review",
+        body: "A clear-eyed audit of what's working, what's fragile, and what to fix first.",
+      },
+      {
+        title: "Technology roadmapping",
+        body: "A prioritized plan tied to business goals, not just a wishlist of upgrades.",
+      },
+    ],
+    process: [
+      "Discovery interviews & systems audit",
+      "Findings & risk assessment",
+      "Roadmap with prioritized recommendations",
+      "Optional hands-on implementation support",
+    ],
+    technologies: ["AWS", "Azure", "GCP", "Architecture Diagramming"],
   },
   {
     slug: "automation",
