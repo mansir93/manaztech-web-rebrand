@@ -30,10 +30,6 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="mb-4 inline-flex items-center gap-2 rounded-full border bg-muted/50 px-3 py-1 text-xs font-medium text-muted-foreground"
           >
-           {/*  <span className="relative flex size-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-primary" />
-            </span> */}
             Transforming ideas into digital reality
           </motion.p>
 
