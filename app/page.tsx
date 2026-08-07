@@ -7,6 +7,7 @@ import Hero from "@/components/blocks/Hero";
 import Portfolio from "@/components/blocks/Portfolio";
 import Process from "@/components/blocks/Process";
 import Services from "@/components/blocks/Services";
+import Stats from "@/components/blocks/Stats";
 import Technologies from "@/components/blocks/Technologies";
 import Testimonials from "@/components/blocks/Testimonials";
 import WhyChooseUs from "@/components/blocks/WhyChooseUs";
@@ -17,6 +18,7 @@ export default function Home() {
     <div className="overflow-hidden">
       <OrganizationSchema />
       <Hero />
+      <Stats />
       <ClientStrip />
       <WhyChooseUs />
       <About />
