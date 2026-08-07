@@ -10,17 +10,17 @@ This repository serves as the primary codebase for the ManazTech website and is 
 
 # Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| Next.js | React Framework |
-| React | User Interface |
-| TypeScript | Type Safety |
-| Tailwind CSS | Styling |
-| shadcn/ui | Reusable UI Components |
-| ESLint | Code Quality |
-| Prettier | Code Formatting |
-| PostCSS | CSS Processing |
-| PNPM | Package Manager |
+| Technology   | Purpose                |
+| ------------ | ---------------------- |
+| Next.js      | React Framework        |
+| React        | User Interface         |
+| TypeScript   | Type Safety            |
+| Tailwind CSS | Styling                |
+| shadcn/ui    | Reusable UI Components |
+| ESLint       | Code Quality           |
+| Prettier     | Code Formatting        |
+| PostCSS      | CSS Processing         |
+| PNPM         | Package Manager        |
 
 ---
 
@@ -441,4 +441,3 @@ Before submitting changes:
 - Format code using Prettier.
 - Verify the project builds successfully.
 - Submit a Pull Request for review.
-

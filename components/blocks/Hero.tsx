@@ -1,31 +1,29 @@
-"use client"
-import Link from "next/link"
-import { motion } from "motion/react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight} from "lucide-react"
+// Path: components/blocks/Hero.tsx
+"use client";
+import Link from "next/link";
+import { motion } from "motion/react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import PreviewWindow from "../PreviewWindow";
 
-
-
 // Fake "code lines" used to animate the left panel of the preview.
-
 
 export default function Hero() {
   return (
     <section
       id="home"
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden py-20"
+      className="max-w-7xl mx-auto px-4 relative py-20 overflow-hidden"
     >
       {/* ambient background glow — subtle, single accent, not decorative overload */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-20 left-1/2 h-125 w-225 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl"
+        className=" pointer-events-none absolute top-20 left-1/2 h-125 w-225 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl"
       />
 
-      <div className="mx-auto px-4 grid lg:grid-cols-2 max-w-7xl grid-cols-1 items-center">
+      <div className="flex flex-col lg:flex-row items-center">
         {/* Left: content */}
-        <div className="relative flex items-start justify-start flex-col">
+        <div className=" flex-1 relative flex items-start justify-start flex-col">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,8 +55,7 @@ export default function Hero() {
             className="mt-5 max-w-lg text-lg text-muted-foreground text-pretty"
           >
             We build cutting-edge software solutions that drive real business
-            results combining startup agility with enterprise-grade
-            engineering.
+            results combining startup agility with enterprise-grade engineering.
           </motion.p>
 
           <motion.div
@@ -67,23 +64,21 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-              <Link href="/#contact">
-                <Button size="lg" className="group">
-                  Start Your Project
-                  <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </Button>
-              </Link>
+            <Link href="/#contact">
+              <Button size="lg" className="group">
+                Start Your Project
+                <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </motion.div>
-         
         </div>
 
         {/* Right: animated app preview */}
-        <div className="relative">
+        <div className="w-full flex-1 mt-12 lg:mt-0 lg:ml-12 relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="relative"
           >
             <PreviewWindow />
           </motion.div>
@@ -123,6 +118,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -1,4 +1,5 @@
 "use client"
+// Path: components/blocks/About.tsx
 
 import React from "react"
 import Image from "next/image"

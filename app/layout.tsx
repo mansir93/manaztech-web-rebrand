@@ -1,10 +1,12 @@
+// Path: app/layout.tsx
+import Footer from "@/components/blocks/Footer";
+import Header from "@/components/blocks/Header";
+import { ThemeProvider } from "@/components/theme-provider";
+import OrganizationSchema from "@/lib/OrganizationSchema";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/blocks/Header";
-import Footer from "@/components/blocks/Footer";
 
 const geistHeading = Geist({ subsets: ["latin"], variable: "--font-heading" });
 
@@ -129,6 +131,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <OrganizationSchema />
+
           <Header />
           <main>{children}</main>
           <Footer />

@@ -1,4 +1,5 @@
 'use client'
+// Path: components/PreviewWindow.tsx
 import { motion } from "motion/react"
 import {
   LayoutGrid,
@@ -22,7 +23,7 @@ const tasks = [
 
 export default function PreviewWindow() {
   return (
-    <div className="mx-auto max-w-md overflow-hidden rounded-xl border bg-card shadow-2xl shadow-primary/10">
+    <div className="w-full 1mx-auto overflow-hidden rounded-xl border bg-card shadow-2xl shadow-primary/10">
       {/* window chrome */}
       <div className="flex items-center gap-1.5 border-b bg-muted/40 px-4 py-2.5">
         <span className="size-2.5 rounded-full bg-red-400/70" />

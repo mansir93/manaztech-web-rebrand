@@ -2,6 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+* {
+  /* border: 1px solid red; */
+}
+
 @custom-variant dark (&:is(.dark *));
 
 html {
@@ -141,15 +145,15 @@ section[id] {
 }
 
 .blog-content h2 {
-  @apply text-3xl font-bold mt-10 mb-4;
+  @apply mt-10 mb-4 text-3xl font-bold;
 }
 
 .blog-content p {
-  @apply text-muted-foreground leading-8 mb-6;
+  @apply text-muted-foreground mb-6 leading-8;
 }
 
 .blog-content ul {
-  @apply list-disc pl-6 my-6;
+  @apply my-6 list-disc pl-6;
 }
 
 .blog-content li {

@@ -1,3 +1,4 @@
+// Path: lib/nav.ts
 export const nav = [
   { label: "Portfolio", url: "/#portfolio" },
   { label: "Services", url: "/#services" },
