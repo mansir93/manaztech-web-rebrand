@@ -38,7 +38,7 @@ export default function Header() {
           isScrolled
             ? "bg-background/95 shadow-lg backdrop-blur-md"
             : "bg-transparent"
-        }`}
+        } ${ pathname == "/get-started" && "sticky top-0 w-full" }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">

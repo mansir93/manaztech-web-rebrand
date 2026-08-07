@@ -43,18 +43,18 @@ export const SERVICE_OPTIONS = [
 ];
 
 export const BUDGET_OPTIONS = [
-  "Under $1,000",
-  "$1,000 – $5,000",
-  "$5,000 – $10,000",
-  "$10,000 – $25,000",
-  "$25,000+",
+  "Under ₵500",
+  "₵500 - ₵2,000",
+  "₵2,000 - ₵5,000",
+  "₵5,000 - ₵10,000",
+  "₵10,000+",
 ];
 
 export const TIMELINE_OPTIONS = [
   "ASAP",
   "Within 1 month",
-  "1–3 months",
-  "3–6 months",
+  "1-3 months",
+  "3-6 months",
   "Just exploring",
 ];
 
