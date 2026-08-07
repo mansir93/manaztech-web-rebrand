@@ -1,8 +1,9 @@
 "use client"
 import Link from "next/link"
 import { motion } from "motion/react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { services } from "@/lib/services-data"
+import { Button } from "../ui/button";
 
 export default function Services() {
   return (
@@ -27,9 +28,15 @@ export default function Services() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => (
+          {services.slice(0,3).map((service, i) => (
             <ServiceCard key={service.slug} service={service} index={i} />
           ))}
+        </div>
+
+        <div className="flex items-center justify-center mt-5">
+          <Link href={'/services'}>
+            <Button variant={'link'}>Learn more <ArrowRight /></Button>
+          </Link>
         </div>
       </div>
     </section>
@@ -55,6 +62,7 @@ function ServiceCard({
       transition={{ duration: 0.45, delay: (index % 3) * 0.08 }}
       className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
     >
+
       <Link
         href={`/services/${service.slug}`}
         className="absolute inset-0 z-10"
@@ -103,11 +111,6 @@ function ServiceCard({
           </span>
         ))}
       </div>
-
-      <Link href={`/services/${service.slug}`} className="relative z-20 mt-4 inline-flex w-fit items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        Learn more
-        <ArrowUpRight className="size-3.5" />
-      </Link>
     </motion.article>
   )
 }

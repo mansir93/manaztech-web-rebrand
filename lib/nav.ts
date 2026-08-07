@@ -1,8 +1,8 @@
 export const nav = [
-  { label: "About", url: "#about" },
-  { label: "Services", url: "#services" },
-  { label: "Portfolio", url: "#portfolio" },
-  { label: "Process", url: "#process" },
-  { label: "Contact", url: "#contact" },
+  { label: "Portfolio", url: "/#portfolio" },
+  { label: "Services", url: "/#services" },
+  { label: "Process", url: "/#process" },
+  { label: "About", url: "/#about" },
   { label: "Blog", url: "/blog" },
+  { label: "Contact", url: "/#contact" },
 ]

@@ -3,7 +3,7 @@
 import React from "react"
 import Link from "next/link"
 import { motion } from "motion/react"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function CTA() {
@@ -32,17 +32,6 @@ export default function CTA() {
 
         {/* content */}
         <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/70 backdrop-blur-sm"
-          >
-            <Sparkles className="size-3.5 text-primary" />
-            Let&apos;s build something that lasts
-          </motion.div>
-
           <motion.h2
             id="cta-heading"
             initial={{ opacity: 0, y: 16 }}
@@ -81,7 +70,7 @@ export default function CTA() {
                         <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </Button>
               </Link>
-              <Link href="#portfolio">
+              {/* <Link href="#portfolio">
                     <Button
                     size="lg"
                     variant="outline"
@@ -89,7 +78,7 @@ export default function CTA() {
                     >
                         View Our Work
                     </Button>
-              </Link>
+              </Link> */}
           </motion.div>
 
           <motion.p
