@@ -42,7 +42,7 @@ export default function About() {
           >
             <div className="relative overflow-hidden rounded-2xl border shadow-xl">
               <Image
-                src="/assets/modern-tech-team.jpg"
+                src="public/assets/modern-tech-team.jpg"
                 alt="Manaz Technologies team collaborating on a client project"
                 width={640}
                 height={520}
