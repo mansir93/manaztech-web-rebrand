@@ -15,7 +15,7 @@ import WhyChooseUs from "@/components/blocks/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div className="space-y-8">
+    <div className="">
       <Hero />
       <Stats />x
       <ClientStrip />
