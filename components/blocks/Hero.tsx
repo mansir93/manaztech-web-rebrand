@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { motion } from "motion/react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, PlayCircle} from "lucide-react"
+import { ArrowRight, PlayCircle } from "lucide-react"
 import PreviewWindow from "../PreviewWindow";
 
 const stats = [
@@ -31,18 +31,7 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
         {/* Left: content */}
         <div className="relative">
-          <motion.p
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border bg-muted/50 px-3 py-1 text-xs font-medium text-muted-foreground"
-          >
-            <span className="relative flex size-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-primary" />
-            </span>
-            Transforming ideas into digital reality
-          </motion.p>
+
 
           <motion.h1
             id="hero-heading"
@@ -72,18 +61,18 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-              <Link href="#contact">
-                <Button size="lg" className="group">
-                  Start Your Project
-                  <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />
-                </Button>
-              </Link>
-              <Link href="#portfolio">
-                <Button size="lg" variant="outline">
-                  <PlayCircle className="mr-1 size-4" />
-                  View Our Work
-                </Button>
-              </Link>
+            <Link href="#contact">
+              <Button size="lg" className="group">
+                Start Your Project
+                <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />
+              </Button>
+            </Link>
+            <Link href="#portfolio">
+              <Button size="lg" variant="outline">
+                <PlayCircle className="mr-1 size-4" />
+                View Our Work
+              </Button>
+            </Link>
           </motion.div>
 
           {/* Stats */}
