@@ -28,12 +28,14 @@ export interface Service {
   overview: string[]
   features: ServiceFeature[]
   process: string[]
+  isFeatured: boolean
   technologies: string[]
 }
 
 export const services: Service[] = [
   {
     slug: "software-development",
+    isFeatured: true,
     title: "Software Development",
     tagline:
       "Custom software built with modern technologies and best practices.",
@@ -71,6 +73,7 @@ export const services: Service[] = [
   },
   {
     slug: "mobile-web-apps",
+    isFeatured: true,
     title: "Mobile & Web Apps",
     tagline:
       "Responsive web and native mobile apps with exceptional user experience.",
@@ -108,6 +111,7 @@ export const services: Service[] = [
   },
   {
     slug: "it-consulting",
+    isFeatured: false,
     title: "IT Consulting",
     tagline: "Strategic technology guidance for informed decisions.",
     summary:
@@ -144,6 +148,7 @@ export const services: Service[] = [
   },
   {
     slug: "cloud-solutions",
+    isFeatured: true,
     title: "Cloud Solutions",
     tagline: "Scalable infrastructure and migration services.",
     summary:
@@ -180,6 +185,7 @@ export const services: Service[] = [
   },
   {
     slug: "automation",
+    isFeatured: false,
     title: "Automation",
     tagline: "Streamline operations with intelligent automation.",
     summary:
@@ -216,6 +222,7 @@ export const services: Service[] = [
   },
   {
     slug: "digital-transformation",
+    isFeatured: false,
     title: "Digital Transformation",
     tagline: "End-to-end modernization for legacy systems.",
     summary:

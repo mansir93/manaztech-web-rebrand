@@ -27,7 +27,7 @@ export default function Services() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => (
+          {services.slice(0,3).map((service, i) => (
             <ServiceCard key={service.slug} service={service} index={i} />
           ))}
         </div>
@@ -103,11 +103,6 @@ function ServiceCard({
           </span>
         ))}
       </div>
-
-      <Link href={`/services/${service.slug}`} className="relative z-20 mt-4 inline-flex w-fit items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        Learn more
-        <ArrowUpRight className="size-3.5" />
-      </Link>
     </motion.article>
   )
 }
