@@ -6,9 +6,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/blocks/Header";
 import Footer from "@/components/blocks/Footer";
 
-const geistHeading = Geist({subsets:['latin'],variable:'--font-heading'});
+const geistHeading = Geist({ subsets: ["latin"], variable: "--font-heading" });
 
-const roboto = Roboto({subsets:['latin'],variable:'--font-sans'});
+const roboto = Roboto({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +20,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://manaztech.com"
-const SITE_NAME = "Manaz Technologies & Solutions"
+const SITE_URL = "https://manaztech.com";
+const SITE_NAME = "Manaz Technologies & Solutions";
 const SITE_DESCRIPTION =
-  "Manaz Technologies & Solutions builds custom software, mobile apps, cloud infrastructure, and digital transformation solutions for startups and enterprises. Innovate. Transform. Deliver."
+  "Manaz Technologies & Solutions builds custom software, mobile apps, cloud infrastructure, and digital transformation solutions for startups and enterprises. Innovate. Transform. Deliver.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
   // verification: {
   //   google: "add-your-google-search-console-code-here",
   // },
-}
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -111,21 +111,28 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", roboto.variable, geistHeading.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        geistSans.variable,
+        geistMono.variable,
+        "font-sans",
+        roboto.variable,
+        geistHeading.variable,
+      )}
+      suppressHydrationWarning
     >
-      <body className="min-h-full">
+      <body className="min-h-full" suppressHydrationWarning>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Header />
-            <main>
-              {children}
-            </main>
-            <Footer />
-          </ThemeProvider>
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
