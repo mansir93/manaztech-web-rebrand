@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <Stats />x
+      <Stats />
       <ClientStrip />
       <WhyChooseUs />
       <About />
