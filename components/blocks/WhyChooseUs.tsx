@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import { motion } from "motion/react"
 import { Zap, ShieldCheck, Layers } from "lucide-react"
 

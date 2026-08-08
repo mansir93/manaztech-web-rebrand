@@ -1,5 +1,3 @@
-import React from "react"
-
 const SITE_URL = "https://manaztech.com"
 
 export default function OrganizationSchema() {

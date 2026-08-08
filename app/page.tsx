@@ -15,7 +15,7 @@ import WhyChooseUs from "@/components/blocks/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Hero />
       <Stats />
       <ClientStrip />

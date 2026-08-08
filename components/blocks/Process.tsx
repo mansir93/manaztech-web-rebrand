@@ -89,11 +89,7 @@ function ProcessStep({
   const reversed = index % 2 === 1
 
   return (
-    <li
-      className={`relative flex flex-col gap-4 pl-16 sm:grid sm:grid-cols-2 sm:gap-8 sm:pl-0 ${
-        reversed ? "" : ""
-      }`}
-    >
+    <li className="relative flex flex-col gap-4 pl-16 sm:grid sm:grid-cols-2 sm:gap-8 sm:pl-0">
       {/* number node on the timeline */}
       <motion.div
         initial={{ scale: 0.6, opacity: 0 }}

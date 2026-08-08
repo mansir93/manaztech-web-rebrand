@@ -1,4 +1,3 @@
-import React from "react"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"

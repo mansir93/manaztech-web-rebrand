@@ -1,12 +1,3 @@
-import {
-  Code2,
-  Smartphone,
-  Compass,
-  Cloud,
-  Workflow,
-  RefreshCw,
-  type LucideIcon,
-} from "lucide-react"
 
 export interface ServiceFeature {
   title: string
@@ -16,15 +7,12 @@ export interface ServiceFeature {
 export interface Service {
   slug: string
   title: string
-  /** Short line shown on the homepage card */
   tagline: string
-  /** Longer intro paragraph shown at the top of the detail page */
   summary: string
-  icon: LucideIcon
+  icon?: string
   tags: string[]
   image: string
   imageAlt: string
-  /** Rich content for the detail page */
   overview: string[]
   features: ServiceFeature[]
   process: string[]
@@ -41,7 +29,7 @@ export const services: Service[] = [
       "Custom software built with modern technologies and best practices.",
     summary:
       "From MVPs to enterprise applications, we design and ship scalable, maintainable software tailored to how your business actually works not a generic template stretched to fit.",
-    icon: Code2,
+    icon: "Code2",
     tags: ["React", "Node.js", "Python"],
     image: "/services/software-development.jpg",
     imageAlt: "Developers reviewing custom software architecture on screen",
@@ -79,7 +67,7 @@ export const services: Service[] = [
       "Responsive web and native mobile apps with exceptional user experience.",
     summary:
       "Cross-platform products that feel native wherever they run one codebase, consistent behavior, and interfaces designed for how people actually hold and tap their devices.",
-    icon: Smartphone,
+    icon: "Smartphone",
     tags: ["React Native", "Flutter", "PWA"],
     image: "/services/mobile-web-apps.png",
     imageAlt: "Mobile app interface displayed across phone and tablet screens",
@@ -116,7 +104,7 @@ export const services: Service[] = [
     tagline: "Scalable infrastructure and migration services.",
     summary:
       "We design and migrate cloud infrastructure that scales with real traffic patterns, secured and monitored from day one on AWS, Azure, or GCP.",
-    icon: Cloud,
+    icon: "Cloud",
     tags: ["AWS", "Azure", "GCP"],
     image: "/services/cloud-solutions.png",
     imageAlt: "Cloud infrastructure dashboard showing server regions",
@@ -153,7 +141,7 @@ export const services: Service[] = [
     tagline: "Strategic technology guidance for informed decisions.",
     summary:
       "Before you commit budget to a stack or a rebuild, get an outside technical read: what will actually hold up, what's overkill, and what's quietly a liability.",
-    icon: Compass,
+    icon: "Compass",
     tags: ["Strategy", "Architecture", "Planning"],
     image: "/services/it-consulting.png",
     imageAlt: "Consultant presenting a technology roadmap on a whiteboard",
@@ -190,7 +178,7 @@ export const services: Service[] = [
     tagline: "Streamline operations with intelligent automation.",
     summary:
       "We find the manual, repetitive steps quietly costing your team hours every week and replace them with reliable, monitored automation — not a fragile script nobody understands.",
-    icon: Workflow,
+    icon: "Workflow",
     tags: ["AI/ML", "RPA", "Workflows"],
     image: "/services/automation.png",
     imageAlt: "Workflow automation diagram with connected process nodes",
@@ -227,7 +215,7 @@ export const services: Service[] = [
     tagline: "End-to-end modernization for legacy systems.",
     summary:
       "We help teams move off legacy systems in stages modernizing what's business-critical first, integrating along the way, rather than a risky big-bang rewrite.",
-    icon: RefreshCw,
+    icon: "RefreshCw",
     tags: ["Migration", "Modernization", "Integration"],
     image: "/services/digital-transformation.png",
     imageAlt: "Team reviewing a system modernization roadmap on a screen",

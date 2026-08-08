@@ -1,50 +1,13 @@
-"use client"
-import Link from "next/link"
-import { motion } from "motion/react"
-import { ArrowRight, ArrowUpRight } from "lucide-react"
-import { services } from "@/lib/services-data"
+'use client'
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "../ui/button";
+import { services } from "@/lib/services-data";
+import Link from "next/link";
 import Image from "next/image";
+import { motion } from "motion/react";
 
-export default function Services() {
-  return (
-    <section
-      id="services"
-      aria-labelledby="services-heading"
-      className="py-20 sm:py-28"
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium text-primary">Our Services</p>
-          <h2
-            id="services-heading"
-            className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl"
-          >
-            Services & Solutions
-          </h2>
-          <p className="mt-4 text-muted-foreground text-pretty">
-            Comprehensive technology services designed to accelerate your
-            digital journey.
-          </p>
-        </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0,3).map((service, i) => (
-            <ServiceCard key={service.slug} service={service} index={i} />
-          ))}
-        </div>
-
-        <div className="flex items-center justify-center mt-5">
-          <Link href={'/services'}>
-            <Button variant={'outline'}>Learn more <ArrowRight /></Button>
-          </Link>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function ServiceCard({
+export default function ServiceCard({
   service,
   index,
 }: {
@@ -54,11 +17,11 @@ function ServiceCard({
 
   return (
     <motion.article 
-    initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.45, delay: (index % 3) * 0.08 }}
-    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
       <Link
         href={`/services/${service.slug}`}
         className="absolute inset-0 z-10"
@@ -85,7 +48,6 @@ function ServiceCard({
         >
           {String(index + 1).padStart(2, "0")}
         </span>
-
       </div>
 
       {/* Content */}

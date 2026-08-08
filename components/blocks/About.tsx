@@ -1,10 +1,10 @@
 "use client"
-// Path: components/blocks/About.tsx
 
-import React from "react"
 import Image from "next/image"
 import { motion } from "motion/react"
-import { Sparkles, HeartHandshake, Trophy } from "lucide-react"
+import { Sparkles, HeartHandshake, Trophy, ArrowRight} from "lucide-react"
+import Link from "next/link";
+import { Button } from "../ui/button";
 
 const points = [
   {
@@ -126,6 +126,12 @@ export default function About() {
                   </div>
                 </motion.div>
               ))}
+              <Link href={'/about'}>
+                <Button variant={'link'}>
+                    Learn more
+                    <ArrowRight className="size-4" />
+                </Button>
+              </Link>
             </dl>
           </motion.div>
         </div>

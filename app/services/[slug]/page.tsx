@@ -1,4 +1,3 @@
-import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
@@ -54,8 +53,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
   const service = getServiceBySlug(slug)
 
   if (!service) notFound()
-
-  const Icon = service.icon
   const currentIndex = services.findIndex((s) => s.slug === slug)
   const nextService = services[(currentIndex + 1) % services.length]
 
@@ -106,9 +103,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
           {/* Header */}
           <header>
-            <div className="flex items-center justify-center rounded-xl bg-primary/10 text-primary size-14">
-              <Icon className="size-7" strokeWidth={1.75} aria-hidden="true" />
-            </div>
             <h1 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl text-balance">
               {service.title}
             </h1>

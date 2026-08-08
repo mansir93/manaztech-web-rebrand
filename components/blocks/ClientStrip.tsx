@@ -1,7 +1,5 @@
 "use client"
-// Path: components/blocks/ClientStrip.tsx
 
-import React from "react"
 import { motion } from "motion/react"
 
 // Placeholder client names — swap for real client names/logo files.

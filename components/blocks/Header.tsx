@@ -1,10 +1,9 @@
-// Path: components/blocks/Header.tsx
 "use client";
 
 import { Button } from "@/components/ui/button";
 import { nav } from "@/lib/nav";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -23,13 +22,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [scrolled, setScrolled] = useState(false);
-  const { scrollY } = useScroll();
   const pathname = usePathname();
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    setScrolled(latest > 8);
-  });
 
   return (
     <>
@@ -102,7 +95,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="bg-background/95 border-border border-t backdrop-blur-md md:hidden">
+          <div className="bg-background/90 border-border border-t backdrop-blur-md md:hidden py-2 z-10">
             <nav
               aria-label="Mobile primary"
               className="mt-6 flex flex-col gap-1 px-4"
@@ -115,6 +108,7 @@ export default function Header() {
                   transition={{ delay: i * 0.05, duration: 0.25 }}
                 >
                   <Link
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     href={n.url}
                     className="text-foreground hover:bg-muted block rounded-md px-3 py-2.5 text-base font-medium"
                   >
@@ -122,6 +116,13 @@ export default function Header() {
                   </Link>
                 </motion.div>
               ))}
+              <ModeToggle />
+              <Link href="/get-started">
+                <Button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                  Get Started
+                  <ArrowUpRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </Button>
+              </Link>
             </nav>
           </div>
         )}

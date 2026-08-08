@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import { motion } from "motion/react"
 import { Heart, Repeat2, MessageCircle, BadgeCheck } from "lucide-react"
 
