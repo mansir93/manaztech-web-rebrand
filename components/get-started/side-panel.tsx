@@ -17,17 +17,17 @@ export function GetStartedSidePanel() {
         }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-foreground/70" aria-hidden="true" />
+      <div className="absolute inset-0 bg-background/50" aria-hidden="true" />
 
-      <div className="relative z-10 flex flex-col justify-between p-10 xl:p-14 text-background w-full">
+      <div className="relative z-10 flex flex-col justify-between p-10 xl:p-14 w-full">
         <div>
-          <span className="text-sm font-medium tracking-wide uppercase text-background/70">
+          <span className="text-sm font-medium tracking-wide uppercase">
             Get Started
           </span>
           <h1 className="mt-4 text-3xl xl:text-4xl font-semibold leading-tight text-balance">
             Let&apos;s build something worth talking about.
           </h1>
-          <p className="mt-4 text-background/80 text-base leading-relaxed max-w-md">
+          <p className="mt-4 text-base leading-relaxed max-w-md">
             Tell us a bit about you and your project. It takes about two
             minutes, and we&apos;ll get back to you within one business day.
           </p>
@@ -35,9 +35,9 @@ export function GetStartedSidePanel() {
 
         <ul className="space-y-4 mt-10">
           {HIGHLIGHTS.map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <CheckCircle2 className="h-5 w-5 shrink-0 mt-0.5 text-background/90" />
-              <span className="text-sm text-background/90">{item}</span>
+            <li key={item} className="flex items-center gap-3">
+              <CheckCircle2 className="h-10 w-10 shrink-0 mt-0.5 text-primary bg-primary/10 p-2 rounded-md" />
+              <span className="text-sm">{item}</span>
             </li>
           ))}
         </ul>
