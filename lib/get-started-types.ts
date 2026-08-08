@@ -1,3 +1,4 @@
+// Path: lib/get-started-types.ts
 export type GetStartedFormData = {
   firstName: string;
   lastName: string;
@@ -43,11 +44,11 @@ export const SERVICE_OPTIONS = [
 ];
 
 export const BUDGET_OPTIONS = [
-  "Under ₵500",
-  "₵500 - ₵2,000",
-  "₵2,000 - ₵5,000",
-  "₵5,000 - ₵10,000",
-  "₵10,000+",
+  "Under ₵5k",
+  "₵5k - ₵10k",
+  "₵10k - ₵20k",
+  "₵20k - ₵50k",
+  "₵50k+",
 ];
 
 export const TIMELINE_OPTIONS = [

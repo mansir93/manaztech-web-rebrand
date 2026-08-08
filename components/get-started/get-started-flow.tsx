@@ -1,3 +1,4 @@
+// Path: components/get-started/get-started-flow.tsx
 "use client";
 
 import { useState } from "react";
@@ -18,7 +19,7 @@ import {
 } from "@/lib/get-started-types";
 
 // Your FormSubmit.co endpoint (email or hashed form ID).
-const FORMSUBMIT_ACTION = "https://formsubmit.co/hello@manaztechnologies.com";
+const FORMSUBMIT_ACTION = "https://formsubmit.co/manaztechnology@gmail.com";
 
 export function GetStartedFlow() {
   const [step, setStep] = useState<StepId>(1);
