@@ -8,7 +8,7 @@ export function ModeToggle() {
   const { setTheme, theme } = useTheme()
 
   return (
-    <Button variant={'outline'} size={'icon'} onClick={()=>setTheme( theme == "light" ? "dark" : "light" )}>
+    <Button variant={'ghost'} size={'icon'} onClick={()=>setTheme( theme == "light" ? "dark" : "light" )}>
       {
         theme == "dark" 
         ? 
