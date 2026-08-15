@@ -261,7 +261,7 @@ export default function AboutPage() {
               Tell us about your project and we&apos;ll get back to you within 24
               hours.
             </p>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Button size="lg" className="mt-7 group">
                     Start a Conversation
                     <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />

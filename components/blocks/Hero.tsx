@@ -13,22 +13,22 @@ export default function Hero() {
     <section
       id="home"
       aria-labelledby="hero-heading"
-      className="max-w-7xl mx-auto px-4 relative py-20 overflow-hidden"
+      className="relative mx-auto max-w-7xl overflow-hidden px-4 py-20"
     >
       {/* ambient background glow — subtle, single accent, not decorative overload */}
       <div
         aria-hidden="true"
-        className=" pointer-events-none absolute top-20 left-1/2 h-125 w-225 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl"
+        className="bg-primary/10 pointer-events-none absolute top-20 left-1/2 h-125 w-225 -translate-x-1/2 rounded-full blur-3xl"
       />
 
-      <div className="flex flex-col lg:flex-row items-center">
+      <div className="flex flex-col items-center lg:flex-row">
         {/* Left: content */}
-        <div className=" flex-1 relative flex items-start justify-start flex-col">
+        <div className="relative flex flex-1 flex-col items-start justify-start">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border bg-muted/50 px-3 py-1 text-xs font-medium text-muted-foreground"
+            className="bg-muted/50 text-muted-foreground mb-4 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium"
           >
             Transforming ideas into digital reality
           </motion.p>
@@ -48,7 +48,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-5 max-w-lg text-lg text-muted-foreground text-pretty"
+            className="text-muted-foreground mt-5 max-w-lg text-lg text-pretty"
           >
             We build cutting-edge software solutions that drive real business
             results combining startup agility with enterprise-grade engineering.
@@ -60,7 +60,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-            <Link href="/#contact">
+            <Link href="/contact">
               <Button size="lg" className="group">
                 Start Your Project
                 <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -70,7 +70,7 @@ export default function Hero() {
         </div>
 
         {/* Right: animated app preview */}
-        <div className="w-full flex-1 mt-12 lg:mt-0 lg:ml-12 relative">
+        <div className="relative mt-12 w-full flex-1 lg:mt-0 lg:ml-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -84,7 +84,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="pointer-events-none absolute -rotate-45 -left-10 top-10 hidden sm:block lg:-left-10"
+            className="pointer-events-none absolute top-10 -left-10 hidden -rotate-45 sm:block lg:-left-10"
             aria-hidden="true"
           >
             <svg

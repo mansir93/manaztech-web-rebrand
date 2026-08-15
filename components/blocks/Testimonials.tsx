@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { motion } from "motion/react"
-import { Heart, Repeat2, MessageCircle, BadgeCheck } from "lucide-react"
+import { motion } from "motion/react";
+import { Heart, Repeat2, MessageCircle, BadgeCheck } from "lucide-react";
 
 interface Testimonial {
-  name: string
-  handle: string
-  role: string
-  quote: string
-  initials: string
-  avatarColor: string
-  likes: string
-  reposts: string
+  name: string;
+  handle: string;
+  role: string;
+  quote: string;
+  initials: string;
+  avatarColor: string;
+  likes: string;
+  reposts: string;
 }
 
 const testimonials: Testimonial[] = [
@@ -48,7 +48,7 @@ const testimonials: Testimonial[] = [
     likes: "142",
     reposts: "31",
   },
-]
+];
 
 export default function Testimonials() {
   return (
@@ -59,7 +59,7 @@ export default function Testimonials() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium text-primary">
+          <p className="text-primary text-sm font-medium">
             Client Testimonials
           </p>
           <h2
@@ -68,7 +68,7 @@ export default function Testimonials() {
           >
             Testimonials & Social Proof
           </h2>
-          <p className="mt-4 text-muted-foreground text-pretty">
+          <p className="text-muted-foreground mt-4 text-pretty">
             What our clients say about working with Manaz Technologies &
             Solutions.
           </p>
@@ -89,18 +89,15 @@ export default function Testimonials() {
         </ul>
       </div>
     </section>
-  )
+  );
 }
 
-// Styled to always read as a dark "X" post card, independent of the
-// site's own light/dark theme — this is a deliberate visual quote,
-// not a themed component.
 function PostCard({ testimonial: t }: { testimonial: Testimonial }) {
   return (
-    <blockquote className="flex h-full flex-col rounded-2xl border border-white/10 bg-black p-5 text-white shadow-lg transition-transform duration-300 hover:-translate-y-1">
+    <blockquote className="border-muted border-b-primary bg-muted flex h-full flex-col rounded-2xl border p-5 shadow-lg transition-transform duration-300 hover:-translate-y-1">
       <header className="flex items-start gap-3">
         <span
-          className={`flex size-11 shrink-0 items-center justify-center rounded-full text-sm font-semibold text-white ${t.avatarColor}`}
+          className={`flex size-11 shrink-0 items-center justify-center rounded-full text-sm font-semibold ${t.avatarColor}`}
           aria-hidden="true"
         >
           {t.initials}
@@ -115,25 +112,25 @@ function PostCard({ testimonial: t }: { testimonial: Testimonial }) {
               aria-label="Verified"
             />
           </div>
-          <p className="truncate text-sm text-white/50">
+          <p className="text-muted-foreground truncate text-sm">
             {t.handle} · {t.role}
           </p>
         </div>
         {/* X logo mark */}
-        <svg
+        {/* <svg
           viewBox="0 0 24 24"
           className="size-4 shrink-0 fill-white/40"
           aria-hidden="true"
         >
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
+        </svg> */}
       </header>
 
-      <p className="mt-3 flex-1 text-[15px] leading-relaxed text-white/90 text-pretty">
+      <p className="text-foreground/70 mt-3 flex-1 text-[15px] leading-relaxed text-pretty">
         {t.quote}
       </p>
 
-      <footer className="mt-4 flex items-center gap-5 border-t border-white/10 pt-3 text-white/50">
+      {/* <footer className="mt-4 flex items-center gap-5 border-t border-white/10 pt-3 text-white/50">
         <span className="flex items-center gap-1.5 text-xs">
           <MessageCircle className="size-4" aria-hidden="true" />
         </span>
@@ -145,7 +142,7 @@ function PostCard({ testimonial: t }: { testimonial: Testimonial }) {
           <Heart className="size-4" aria-hidden="true" />
           {t.likes}
         </span>
-      </footer>
+      </footer> */}
     </blockquote>
-  )
+  );
 }

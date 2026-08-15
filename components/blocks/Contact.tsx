@@ -1,10 +1,10 @@
-import { Mail, Phone, MapPin, Send } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { Button } from "@/components/ui/button"
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
-const FORM_ENDPOINT = "https://formsubmit.co/hello@manaztechnologies.com"
+const FORM_ENDPOINT = "https://formsubmit.co/hello@manaztechnologies.com";
 
 const contactInfo = [
   {
@@ -25,7 +25,7 @@ const contactInfo = [
     lines: ["New Madina, Estate"],
     hrefPrefix: null,
   },
-]
+];
 
 export default function Contact() {
   return (
@@ -36,14 +36,14 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium text-primary">Get In Touch</p>
+          <p className="text-primary text-sm font-medium">Get In Touch</p>
           <h2
             id="contact-heading"
             className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl"
           >
             Contact & Call to Action
           </h2>
-          <p className="mt-4 text-muted-foreground text-pretty">
+          <p className="text-muted-foreground mt-4 text-pretty">
             Ready to transform your business with innovative technology
             solutions? Let&apos;s discuss your project and bring your vision to
             life.
@@ -53,22 +53,24 @@ export default function Contact() {
         <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-8">
           {/* Info column*/}
           <div className="lg:col-span-2">
-            <div className="rounded-2xl border bg-card p-6 sm:p-8">
-              <h3 className="text-lg font-semibold">Let&apos;s build your next big idea</h3>
-              <p className="mt-2 text-sm text-muted-foreground text-pretty">
-                Whether you&apos;re a startup with a groundbreaking concept or an
-                enterprise ready for digital transformation, we&apos;re here to
-                make it happen.
+            <div className="bg-card rounded-2xl border p-6 sm:p-8">
+              <h3 className="text-lg font-semibold">
+                Let&apos;s build your next big idea
+              </h3>
+              <p className="text-muted-foreground mt-2 text-sm text-pretty">
+                Whether you&apos;re a startup with a groundbreaking concept or
+                an enterprise ready for digital transformation, we&apos;re here
+                to make it happen.
               </p>
 
               <dl className="mt-8 space-y-6">
                 {contactInfo.map((item) => (
                   <div key={item.label} className="flex gap-4">
-                    <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <span className="bg-primary/10 text-primary flex size-10 shrink-0 items-center justify-center rounded-lg">
                       <item.icon className="size-5" strokeWidth={1.75} />
                     </span>
                     <div>
-                      <dt className="text-sm font-medium text-muted-foreground">
+                      <dt className="text-muted-foreground text-sm font-medium">
                         {item.label}
                       </dt>
                       <dd className="mt-1 space-y-0.5">
@@ -77,7 +79,7 @@ export default function Contact() {
                             <a
                               key={line}
                               href={`${item.hrefPrefix}${line.replace(/\s+/g, "")}`}
-                              className="block text-sm font-medium hover:text-primary"
+                              className="hover:text-primary block text-sm font-medium"
                             >
                               {line}
                             </a>
@@ -85,7 +87,7 @@ export default function Contact() {
                             <p key={line} className="text-sm font-medium">
                               {line}
                             </p>
-                          )
+                          ),
                         )}
                       </dd>
                     </div>
@@ -97,9 +99,9 @@ export default function Contact() {
 
           {/*Form column */}
           <div className="lg:col-span-3">
-            <div className="rounded-2xl border bg-card p-6 sm:p-8">
+            <div className="bg-card rounded-2xl border p-6 sm:p-8">
               <h3 className="text-lg font-semibold">Send Us a Message</h3>
-              <p className="mt-1 text-sm text-muted-foreground">
+              <p className="text-muted-foreground mt-1 text-sm">
                 Tell us about your project and we&apos;ll get back to you within
                 24 hours.
               </p>
@@ -110,31 +112,65 @@ export default function Contact() {
                 className="mt-6 space-y-5"
               >
                 {/* FormSubmit configuration — no account/API key needed */}
-                <input type="hidden" name="_subject" value="New project inquiry — ManazTech website" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New project inquiry — ManazTech website"
+                />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="true" />
                 {/* Honeypot field: bots fill this in, real users never see it */}
-                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+                <input
+                  type="text"
+                  name="_honey"
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
 
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">First name</Label>
-                    <Input id="firstName" name="First Name" required autoComplete="given-name" />
+                    <Input
+                      id="firstName"
+                      placeholder="Mike"
+                      name="First Name"
+                      required
+                      autoComplete="given-name"
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="lastName">Last name</Label>
-                    <Input id="lastName" name="Last Name" required autoComplete="family-name" />
+                    <Input
+                      id="lastName"
+                      placeholder="Huston"
+                      name="Last Name"
+                      required
+                      autoComplete="family-name"
+                    />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" name="Email" type="email" required autoComplete="email" />
+                    <Input
+                      id="email"
+                      placeholder="acme@acmeorg.com"
+                      name="Email"
+                      type="email"
+                      required
+                      autoComplete="email"
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="company">Company</Label>
-                    <Input id="company" name="Company" autoComplete="organization" />
+                    <Input
+                      id="company"
+                      placeholder="Acme Org."
+                      name="Company"
+                      autoComplete="organization"
+                    />
                   </div>
                 </div>
 
@@ -149,7 +185,11 @@ export default function Contact() {
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full sm:w-auto group">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="group w-full sm:w-auto"
+                >
                   Send Message
                   <Send className="ml-1.5 size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Button>
@@ -159,5 +199,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

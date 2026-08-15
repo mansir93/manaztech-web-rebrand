@@ -31,7 +31,7 @@ export default function Header() {
           isScrolled
             ? "bg-background/95 shadow-lg backdrop-blur-md"
             : "bg-transparent"
-        } ${ pathname == "/get-started" && "sticky top-0 w-full" }`}
+        } ${pathname == "/get-started" && "sticky top-0 w-full"}`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -53,12 +53,13 @@ export default function Header() {
               className="hidden items-center gap-1 md:block lg:flex"
             >
               {nav.map((n) => (
-                <Link
-                  key={n.label}
-                  href={n.url}
-                  className="text-muted-foreground hover:text-foreground hover:bg-muted/60 focus-visible:ring-ring relative rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:outline-none"
-                >
-                  {n.label}
+                <Link key={n.label} href={n.url}>
+                  <Button
+                    size={"sm"}
+                    variant={pathname == n.url ? "secondary" : "ghost"}
+                  >
+                    {n.label}
+                  </Button>
                 </Link>
               ))}
             </nav>
@@ -95,7 +96,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="bg-background/90 border-border border-t backdrop-blur-md md:hidden py-2 z-10">
+          <div className="bg-background/90 border-border z-10 border-t py-2 backdrop-blur-md md:hidden">
             <nav
               aria-label="Mobile primary"
               className="mt-6 flex flex-col gap-1 px-4"

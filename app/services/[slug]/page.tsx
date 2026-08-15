@@ -90,7 +90,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               </li>
               <li aria-hidden="true">/</li>
               <li>
-                <Link href="/#services" className="hover:text-foreground">
+                <Link href="/services" className="hover:text-foreground">
                   Services
                 </Link>
               </li>
@@ -215,7 +215,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               Tell us about your goals and we&apos;ll get back to you within 24
               hours.
             </p>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Button size="lg" className="mt-6 group">
                     Start a Conversation
                     <ArrowRight className="ml-1 size-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -229,7 +229,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             className="mt-12 flex items-center justify-between border-t pt-8"
           >
             <Link
-              href="/#services"
+              href="/services"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
             >
               <ArrowLeft className="size-4" />

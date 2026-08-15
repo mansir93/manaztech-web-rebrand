@@ -1,9 +1,7 @@
 // Path: app/page.tsx
 import About from "@/components/blocks/About";
 import ClientStrip from "@/components/blocks/ClientStrip";
-import Contact from "@/components/blocks/Contact";
 import CTA from "@/components/blocks/CTA";
-import FAQ from "@/components/blocks/FAQ";
 import Hero from "@/components/blocks/Hero";
 import Portfolio from "@/components/blocks/Portfolio";
 import Process from "@/components/blocks/Process";
@@ -26,8 +24,6 @@ export default function Home() {
       <Portfolio />
       <Process />
       <Testimonials />
-      <Contact />
-      <FAQ />
       <CTA />
     </div>
   );
