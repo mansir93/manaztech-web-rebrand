@@ -105,6 +105,7 @@ export const metadata: Metadata = {
   //   google: "add-your-google-search-console-code-here",
   // },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
