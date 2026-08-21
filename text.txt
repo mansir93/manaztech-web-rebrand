@@ -1,0 +1,17 @@
+// Path: text.txt
+npx prettier --write .
+npx expo start --clear
+
+
+
+npx eslint . --fix
+
+// for android and playstore submission
+eas build --platform android --profile production
+eas submit --platform android --latest
+
+
+eas build --platform android --auto-submit
+eas build --platform ios --auto-submit
+
+eas update --branch production --message "Fixed pickup bug"
