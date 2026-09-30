@@ -160,6 +160,10 @@ section[id] {
   @apply mb-2;
 }
 
+.blog-content a {
+  @apply text-primary font-medium underline underline-offset-4;
+}
+
 .blog-content section {
   @apply mb-10;
 }

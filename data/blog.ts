@@ -46,7 +46,8 @@ export const blogs = [
   },
   {
     id: 2,
-    title: "The Real Cost of Technical Debt (And When It's Actually Worth Taking On)",
+    title:
+      "The Real Cost of Technical Debt (And When It's Actually Worth Taking On)",
     slug: "real-cost-of-technical-debt",
     image: "/blog/technical-debt.png",
     description:
@@ -90,7 +91,8 @@ export const blogs = [
   },
   {
     id: 3,
-    title: "React Native vs. Flutter in 2026: Which One Actually Fits Your Project",
+    title:
+      "React Native vs. Flutter in 2026: Which One Actually Fits Your Project",
     slug: "react-native-vs-flutter-2026",
     image: "/blog/react-native-vs-flutter.png",
     description:
@@ -170,4 +172,56 @@ export const blogs = [
         </section>
     `,
   },
-]
+  {
+    id: 5,
+    title: "Why AI Study Apps Should Answer From the Student's Own Notes",
+    slug: "why-ai-study-apps-should-answer-from-student-notes",
+    image: "/blog/why-ai-study-apps-should-answer-from-student-notes.png",
+    description:
+      "An AI chatbot that answers confidently and wrongly is worse than no AI at all — especially for students who can't tell the difference. Here's how we grounded DuoDemia's tutor in the material it's actually asked about.",
+    keywords: [
+      "AI grounding",
+      "RAG",
+      "AI study app",
+      "LLM products",
+      "education technology",
+    ],
+    content: `
+        <section>
+            <p>A language model that answers confidently is a lot of fun — until it's confidently wrong. In most products, a wrong answer is an inconvenience. In a study tool, it's misinformation that a student might carry into an exam. The frustrating part is that you can't design the confidently wrong answer out of a generic chatbot by prompting alone; you have to change where the answer comes from. That decision shaped the biggest product we shipped this year — DuoDemia, an AI study app that turns a student's own lecture notes and past questions into revision materials.</p>
+        </section>
+
+        <section>
+            <h2>The problem with confident answers</h2>
+            <p>Give a generic chatbot a question about a course and it will produce a fluent, well-structured answer — whether or not it's true. Professionals can usually sanity-check a plausible-sounding answer against what they already know or can look up. A student facing a question on, say, the money supply either hasn't covered that topic yet or is actively trying to learn it, which means they have no reliable way to tell a real explanation from an invented one. The failure isn't the model's inaccuracy — it's that inaccuracy is indistinguishable from success to the person who needs the answer most.</p>
+        </section>
+
+        <section>
+            <h2>Ground the model in a source of truth</h2>
+            <p>The fix we settled on is retrieval-augmented generation over the student's own documents. When a student uploads a lecture PDF, a slide deck or a set of notes, we chunk and index the text so the tutor can search it. When the student asks a question, the tutor retrieves only the most relevant passages from that student's uploaded material and constructs the answer from those passages — not from its general knowledge of the internet.</p>
+            <p>That part is fairly standard RAG. The part that matters for trust is the rejection path: when a question isn't supported by the uploaded material, the tutor says exactly that instead of inventing an answer. It's a small behavior, but it's the difference between a study tool that quietly fabricates and one a student can actually rely on. This is the approach running live at <a href="https://www.duodemia.com" target="_blank" rel="noopener noreferrer">duodemia.com</a>.</p>
+        </section>
+
+        <section>
+            <h2>From answer to revision pack</h2>
+            <p>Grounding solved the trust problem, but answering questions well is only half of studying. So we turned each uploaded document into a full revision pack: a short summary, the key concepts an examiner would likely ask about, likely exam questions, spaced-repetition flashcards and a practice quiz. As students practise, the system tracks their accuracy topic by topic and feeds that back into a weakness map — so the app points students at what to revise next instead of leaving them to re-read 80-slide decks.</p>
+            <p>Practising matters more than reading, so quizzes and timed mock exams are a first-class part of the product rather than an add-on. Students also wanted to study together, which meant adding groups, shared progress and leaderboards on top of the study packs.</p>
+        </section>
+
+        <section>
+            <h2>What this taught us about building AI products</h2>
+            <ul>
+                <li><strong>Ground every answer in data you can point to.</strong> If the model can't cite the source, the user shouldn't have to take the answer on faith. The "where did this come from?" question should be answerable every time.</li>
+                <li><strong>Design the "I don't know" path as a feature.</strong> Most LLM products treat refusal as a failure mode to hide. We made it visible and deliberate — it's precisely what builds trust with users who can't verify answers themselves.</li>
+                <li><strong>Inputs aren't clean.</strong> Lecture decks are scanned, folded, covered in handwriting, occasionally upside down. A chunking and extraction pipeline that tolerates messy real-world documents is a non-trivial chunk of the engineering work.</li>
+                <li><strong>Measure outcomes, not just answer quality.</strong> We track quiz accuracy and topic mastery, because the product is judged by whether students perform better, not by whether answers look fluent.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>A rule worth borrowing</h2>
+            <p>The lesson generalises past education: if a chatbot answer can't be traced to something the person actually owns or verified, treat the invention risk as a product decision, not a model tweak. For any AI feature whose users can't reliably fact-check the output, a grounded, say-so-when-unsure design isn't a nice-to-have — it's the entire value proposition.</p>
+        </section>
+    `,
+  },
+];
