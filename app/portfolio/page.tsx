@@ -1,11 +1,11 @@
-import type { Metadata } from "next"
-import { portfolioProjects } from "@/data/PortfolioProject"
+import type { Metadata } from "next";
+import { portfolioProjects } from "@/data/PortfolioProject";
 import ProjectCard from "@/components/portfolio/ProjectCard";
 
-const SITE_URL = "https://manaztech.com"
-const PAGE_TITLE = "Portfolio & Case Studies"
+const SITE_URL = "https://manaztech.com";
+const PAGE_TITLE = "Portfolio & Case Studies";
 const PAGE_DESCRIPTION =
-  "Selected work from Manaz Technologies & Solutions — real projects across e-commerce, healthcare, and education, with the challenges we solved and the results delivered."
+  "Selected work from Manaz Technologies & Solutions — real products across education, e-commerce and healthcare, with the challenges we solved and what shipped.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -22,18 +22,18 @@ export const metadata: Metadata = {
     title: `${PAGE_TITLE} | Manaz Technologies & Solutions`,
     description: PAGE_DESCRIPTION,
   },
-}
+};
 
 export default function PortfolioPage() {
   return (
     <>
       <header className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-sm font-medium text-primary">Our Work</p>
+          <p className="text-primary text-sm font-medium">Our Work</p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
             Portfolio & Case Studies
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground text-pretty">
+          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-pretty">
             {PAGE_DESCRIPTION}
           </p>
         </div>
@@ -49,5 +49,5 @@ export default function PortfolioPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

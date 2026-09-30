@@ -1,8 +1,9 @@
-import type { MetadataRoute } from "next"
-import { services } from "@/lib/services-data"
-import { blogs } from "@/data/blog"
+import type { MetadataRoute } from "next";
+import { services } from "@/lib/services-data";
+import { blogs } from "@/data/blog";
+import { portfolioProjects } from "@/data/PortfolioProject";
 
-const SITE_URL = "https://manaztech.com"
+const SITE_URL = "https://manaztech.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const serviceRoutes: MetadataRoute.Sitemap = services.map((service) => ({
@@ -10,14 +11,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.7,
-  }))
+  }));
 
   const blogRoutes: MetadataRoute.Sitemap = blogs.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.6,
-  }))
+  }));
+
+  const portfolioRoutes: MetadataRoute.Sitemap = portfolioProjects.map(
+    (project) => ({
+      url: `${SITE_URL}/portfolio/${project.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }),
+  );
 
   return [
     {
@@ -63,6 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     ...serviceRoutes,
+    ...portfolioRoutes,
     ...blogRoutes,
-  ]
+  ];
 }
